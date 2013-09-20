@@ -56,7 +56,7 @@
 		proxy-target-class="true" />
 
 	<neo4j:config storeDirectory="target/graph.db" />
-	<neo4j:repositories base-package="br.com.twmtecnologia" />
+	<neo4j:repositories base-package="br.com.twmtecnologia.repository" />
 
 	<bean id="graphDatabaseService" class="org.neo4j.kernel.EmbeddedGraphDatabase"
 		destroy-method="shutdown">
