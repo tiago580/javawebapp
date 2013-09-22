@@ -12,15 +12,11 @@
         <h:messages />
  
         <h:panelGrid columns="2">
-            <h:outputText value="Nome: " />
-            <h:inputText value="#{cadastroBean.pessoa.nome}" />
-            <h:outputText value="E-mail: " />
-            <h:inputText value="#{cadastroBean.pessoa.email}" />
-            <h:outputText value="Idade: " />
-            <h:inputText value="#{cadastroBean.pessoa.idade}" />
+        <h:outputText value="Nome: " />
+        <h:inputText value="#{customerBean.customer.firstName}" />
         </h:panelGrid>
  
-        <h:commandButton value="Cadastrar!" action="#{cadastroBean.cadastrar}" />
+        <h:commandButton value="Cadastrar!" action="#{customerBean.cadastrar}" />
  
     </h:form>
 </h:body>

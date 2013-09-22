@@ -55,19 +55,4 @@
 	<tx:annotation-driven transaction-manager="transactionManager"
 		proxy-target-class="true" />
 
-	<neo4j:config storeDirectory="target/graph.db" />
-	<neo4j:repositories base-package="br.com.twmtecnologia.repository" />
-
-	<bean id="graphDatabaseService" class="org.neo4j.kernel.EmbeddedGraphDatabase"
-		destroy-method="shutdown">
-		<constructor-arg value="target/graph.db" />
-		<constructor-arg> <!-- passing configuration properties -->
-			<map>
-				<entry key="allow_store_upgrade" value="true" />
-			</map>
-		</constructor-arg>
-	</bean>
-
-
-
 </beans>
