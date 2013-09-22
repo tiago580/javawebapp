@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context reloadable="true">
-	<Resource name="jdbc/UsuariosDB"
+	<Resource name="jdbc/PortalMerendaDB"
 		auth="Container"
 		type="javax.sql.DataSource"
 		maxActive="100"
@@ -9,6 +9,6 @@
 		username="root"
 		password="root"
 		driverClassName="com.mysql.jdbc.Driver"
-		url="jdbc:mysql://localhost:3306/wehavescience?autoReconnect=true"
+		url="jdbc:mysql://localhost:3306/portaldamerenda?autoReconnect=true"
 	/>
 </Context>

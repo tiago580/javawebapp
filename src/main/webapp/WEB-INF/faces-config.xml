@@ -7,5 +7,13 @@
     version="2.1">
 <application>
         <el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+		<resource-bundle>
+			<base-name>br.com.twmtecnologia.messages</base-name>
+			<var>msgs</var>
+		</resource-bundle>
+		<locale-config>
+			 <default-locale>pt_BR</default-locale>
+            <supported-locale>en</supported-locale>
+		</locale-config>
     </application>
 </faces-config>

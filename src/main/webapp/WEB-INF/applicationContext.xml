@@ -27,17 +27,17 @@
 	<context:annotation-config />
 	<context:component-scan base-package="br.com.twmtecnologia" />
 
-	<bean id="usuariosDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+	<bean id="portalMerendaDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
 		<property name="jndiName">
-			<value>java:comp/env/jdbc/UsuariosDB</value>
+			<value>java:comp/env/jdbc/PortalMerendaDB</value>
 		</property>
 	</bean>
 
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
 		autowire-candidate="default">
-		<property name="dataSource" ref="usuariosDataSource" />
-		<property name="persistenceUnitName" value="WeHaveSciencePU" />
+		<property name="dataSource" ref="portalMerendaDataSource" />
+		<property name="persistenceUnitName" value="PortalMerendaPU" />
 		<property name="jpaVendorAdapter">
 			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
 				<property name="generateDdl" value="false" />

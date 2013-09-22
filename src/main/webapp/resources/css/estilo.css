@@ -1,0 +1,70 @@
+@CHARSET "UTF-8";
+.ui-widget {
+	font-size: 12px !important;
+}
+
+#titulo{
+	width: 100%;
+	height: 130px;
+	background-image: url(#{resource['img:titulo.png']});
+	background-repeat: repeat-x;
+}
+#titulo-principal{
+	width: 100%;
+	float: left;	
+}
+
+#logo{
+	margin-left:20px;
+	float:left;
+	width: 200px;
+	height: 130px;
+	background-image: url(#{resource['img:logo.png']});
+}
+#divLogin{
+	float: right;
+	margin-right: 20px;	
+	padding-top:20px;
+	width: 400px;
+	display: block;
+}
+
+#comandos{
+	margin-left: 32px;
+	margin-top: 10px;
+}
+#conteudo{
+	width: 100%;
+	float: left;
+	background-color: #f0f0f0;
+	height: 550px;
+}
+
+#animacao{
+	float: left;		
+	background-color: #ffffff;
+	margin: 100px 0 0 100px; 
+	padding:10px;
+
+	
+}
+
+
+#cadastro{
+	margin: 100px 100px 0  0;
+	float:right;
+	background-color: #ffffff;
+}
+
+.botao-verde{
+	background-color: #53b84d;
+}
+
+#rodape{
+	background-color: #f0f0f0;
+	width: 100%;
+	height: 70px;
+	float: left;
+}
+
+
