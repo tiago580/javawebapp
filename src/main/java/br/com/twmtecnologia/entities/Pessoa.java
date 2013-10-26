@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-import br.com.twmtecnologia.base.entity.EntityObject;
+import br.com.trsystems.base.entity.EntityObject;
 
 
 @Entity

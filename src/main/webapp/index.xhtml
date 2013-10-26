@@ -7,46 +7,42 @@
 
 <h:head>
 	<title>Login</title>
+	<h:outputStylesheet name="estilo.css" library="css" />
 </h:head>
 <h:body>
 
-	<ui:composition template="/templates/masterLayout.xhtml">
-		<ui:define name="content">
-			<h:panelGroup rendered="${!empty param.login_error}">
-				<span style="font-color: red">Erro ao efetuar login.</span>
+	<h:panelGroup rendered="${!empty param.login_error}">
+		<span style="font-color: red">Erro ao efetuar login.</span>
 
-				<br />
+		<br />
 Motivo: ${SPRING_SECURITY_LAST_EXCEPTION.message}
 </h:panelGroup>
-			<form id="login" method="post"
-				action="${request.contextPath}/j_spring_security_check">
-				<p:dialog id="dialog" header="#{msgs.nameSystem}" widgetVar="dlg"
-					resizable="false" visible="true" closable="false">
+	<form id="login" method="post"
+		action="${request.contextPath}/j_spring_security_check">
+		<p:dialog id="dialog" header="#{msgs.nameSystem}" widgetVar="dlg"
+			resizable="false" visible="true" closable="false">
 
-					<h:panelGrid>
-						<p:outputLabel for="j_username" value="#{msgs.username}" />
-						<p:inputText name="j_username" id="j_username" />
+			<h:panelGrid>
+				<p:outputLabel for="j_username" value="#{msgs.username}" />
+				<p:inputText name="j_username" id="j_username" />
 
-						<p:outputLabel for="j_username" value="#{msgs.password}" />
-						<p:password name="j_password" id="j_password" />
+				<p:outputLabel for="j_username" value="#{msgs.password}" />
+				<p:password name="j_password" id="j_password" />
 
-						<f:facet name="footer">
-							<input type="submit" value="Entrar"
-								style="width: 120px:height:70px; padding: 5px"
-								class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" />
-						</f:facet>
-					</h:panelGrid>
+				<f:facet name="footer">
+					<input type="submit" value="Entrar"
+						style="width: 120px:height:70px; padding: 5px"
+						class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" />
+				</f:facet>
+			</h:panelGrid>
 
-				</p:dialog>
+		</p:dialog>
 
-				<script>
+		<script>
 			document.getElementById("login").j_username.value = "${SPRING_SECURITY_LAST_USERNAME}"
 		</script>
-			</form>
+	</form>
 
 
-		</ui:define>
-
-	</ui:composition>
 </h:body>
 </html>

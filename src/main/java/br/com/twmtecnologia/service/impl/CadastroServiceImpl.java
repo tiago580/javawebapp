@@ -36,6 +36,16 @@ public class CadastroServiceImpl implements CadastroService{
 		dao.delete(object);
 		
 	}
+
+	@Override
+	public List<Pessoa> find(int startingAt, int maxPerPage) {
+		return dao.find(startingAt, maxPerPage);
+	}
+
+	@Override
+	public int countRecordsTotal() {
+		return dao.countRecordsTotal();
+	}
  
 		
 }

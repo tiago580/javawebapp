@@ -1,4 +1,4 @@
-package br.com.twmtecnologia.base.entity;
+package br.com.trsystems.base.entity;
 
 import java.io.Serializable;
 

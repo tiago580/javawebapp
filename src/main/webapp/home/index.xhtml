@@ -7,19 +7,19 @@
 
 <h:head>
 	<title>#{msgs.pageTitle}</title>
-<!-- 	Usuario logado #{request.remoteUser} -->
-<!-- 	 Rendered only if user has all of the listed roles --> 
-<!-- 	<h:outputText value="Lorem ipsum dolor sit amet" -->
-<!-- 		rendered="#{sec:areNotGranted('ROLE_USER')}" /> -->
-<!-- 	<sec:authorize ifNotGranted="ROLE_ADMIN"> -->
-<!-- 		<h:commandButton value="#{msgs.cancel}" /> -->
-<!-- 	</sec:authorize> -->
+	<!-- 	Usuario logado #{request.remoteUser} -->
+	<!-- 	 Rendered only if user has all of the listed roles -->
+	<!-- 	<h:outputText value="Lorem ipsum dolor sit amet" -->
+	<!-- 		rendered="#{sec:areNotGranted('ROLE_USER')}" /> -->
+	<!-- 	<sec:authorize ifNotGranted="ROLE_ADMIN"> -->
+	<!-- 		<h:commandButton value="#{msgs.cancel}" /> -->
+	<!-- 	</sec:authorize> -->
 </h:head>
 <h:body>
-<ui:composition template="/templates/masterLayout.xhtml">
-<ui:define name="content">
-<h:outputText value="#{msgs.welcome}" />
-</ui:define>
-</ui:composition>
+	<ui:composition template="/templates/masterLayout.xhtml">
+		<ui:define name="content">
+			<h:outputText value="#{resquest.remoteUser}" />
+		</ui:define>
+	</ui:composition>
 </h:body>
 </html>

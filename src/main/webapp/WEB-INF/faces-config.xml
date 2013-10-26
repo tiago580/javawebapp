@@ -8,7 +8,7 @@
 <application>
         <el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
 		<resource-bundle>
-			<base-name>br.com.twmtecnologia.messages</base-name>
+			<base-name>br.com.trsystems.messages</base-name>
 			<var>msgs</var>
 		</resource-bundle>
 		<locale-config>

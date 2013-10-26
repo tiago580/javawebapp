@@ -9,6 +9,6 @@
 		username="root"
 		password="root"
 		driverClassName="com.mysql.jdbc.Driver"
-		url="jdbc:mysql://localhost:3306/portaldamerenda?autoReconnect=true"
+		url="jdbc:mysql://192.168.1.14:3306/javawebapp?autoReconnect=true"
 	/>
 </Context>
