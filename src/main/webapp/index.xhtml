@@ -2,17 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:ui="http://java.sun.com/jsf/facelets">
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 	<title>Login</title>
 	<h:outputStylesheet name="estilo.css" library="css" />
-	<h:outputStylesheet name="bootstrap.min.css"
-		library="libs/bootstrap/css" />
-	<h:outputStylesheet name="bootstrap-theme.min.css"
-		library="libs/bootstrap/css" />
-	<h:outputScript name="jquery-1.10.2.min.js" library="libs/jquery" />
-	<h:outputScript name="bootstrap.min.js" library="libs/bootstrap/js" />
+
 	<style type="text/css">
 body {
 	padding-top: 40px;
@@ -58,12 +54,17 @@ Motivo: ${SPRING_SECURITY_LAST_EXCEPTION.message}
 		<form id="login" method="post" class="form-signin"
 			action="${request.contextPath}/j_spring_security_check">
 			<h2 class="form-signin-heading">#{msgs.nameSystem}</h2>
-			<input class="input-block-level" placeholder="#{msgs.username}"
-				type="text" name="j_username" id="j_username" /> <input
-				class="input-block-level" placeholder="#{msgs.password}"
-				type="password" name="j_password" id="j_password" /> <input
-				type="submit" value="#{msgs.login}"
-				class="btn btn-large btn-primary" />
+			<h:panelGrid >
+			<p:inputText id="j_username" size="40"/>
+			<p:watermark value="#{msgs.username}" for="j_username"/>
+			
+			<p:password id="j_password"  size="40"/>
+			<p:watermark value="#{msgs.password}" for="j_password"/>
+			
+			<p:button value="#{msgs.login}" type="submit"/>
+			</h:panelGrid>
+			
+
 			<script>
 				document.getElementById("login").j_username.value = "${SPRING_SECURITY_LAST_USERNAME}"
 			</script>
